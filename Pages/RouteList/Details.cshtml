@@ -1,0 +1,142 @@
+﻿@page
+@model Climbing4Everyone.Pages.RouteList.DetailsModel
+@using Climbing4Everyone2._0.Utility;
+
+<br />
+<h2 class="text-info">Route Details</h2>
+<br />
+
+<div class="border containter" style="padding:30px;">
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RouteName"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RouteName)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RouteDifficulty"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RouteDifficulty)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RockName"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RockName)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RegionName"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RegionName)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.ApproachTime"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.ApproachTime)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RockHeight"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RockHeight)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RockExposure"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RockExposure)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.FloorUnder"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.FloorUnder)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RouteFormations"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RouteFormations)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.RoutesOnRock"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.RoutesOnRock)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.Description"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.DisplayFor(model => model.Route.Description)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-4">
+            <label asp-for="Route.MapLink"></label>
+        </div>
+
+        <div class="col-6">
+            @Html.Raw(Model.Route.MapLink)
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <div class="col-3">
+            @if (User.IsInRole(SD.AdminEndUser))
+            {
+                <a asp-page="/RouteList/Admin" class="btn btn-outline-success form-control">Back to List</a>
+            }
+            @if (User.IsInRole(SD.CustomerEndUser))
+            {
+                <a asp-page="Index" class="btn btn-outline-success form-control">Back to List</a>
+            }
+        </div>
+    </div>
+</div>

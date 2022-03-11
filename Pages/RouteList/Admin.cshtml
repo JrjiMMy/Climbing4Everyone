@@ -1,0 +1,29 @@
+﻿@page
+@model Climbing4Everyone2._0.Pages.RouteList.AdminModel
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<div class="containter row p-0 m-0">
+    <div class="col-10">
+        <h2 class="text-info text-dark">Route List</h2>
+    </div>
+
+    <div class="col-12 border p-3">
+        <table id="DT_load" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th>RouteName</th>
+                    <th>RouteDifficulty</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script src="~/js/routeListAdmin.js"></script>
+}
